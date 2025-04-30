@@ -5,7 +5,7 @@ ENDUNGEN="bmp jpg jpeg png webp"
 
 pattern=$(echo "$ENDUNGEN" | sed 's/ /\\|/g')
 if [ ! "$(ls -A *.{$pattern} 2>/dev/null)" ]; then
-    echo "No images with the endings ($ENDINGS) found in the current directory!"
+    echo "No images with the endings ($ENDUNGEN) found in the current directory!"
     exit 1
 fi
 folder_count=1
